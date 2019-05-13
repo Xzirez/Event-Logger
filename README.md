@@ -1,2 +1,0 @@
-# Event-Logger
-HELLO WORLD
