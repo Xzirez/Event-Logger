@@ -14,10 +14,12 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         loginBtn.setOnClickListener {
-            if (emailTxt.text.equals("test") && passTxt.text.equals("test")) {
-                val intent = Intent(this, MainActivity::class.java)
+            /*if (emailTxt.text.equals("test") && passTxt.text.equals("test")) {
+                val intent = Intent(this, ProfileActivity::class.java)
                 startActivity(intent)
-            }
+            }*/
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
         }
     }
 }
