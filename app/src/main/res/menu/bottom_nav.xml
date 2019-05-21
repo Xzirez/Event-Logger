@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/nav_home"
-          android:icon="@drawable/ic_home_black_24dp"
-          android:title="Home"/>
-    <item android:id="@+id/nav_people"
-          android:icon="@drawable/ic_people_black_24dp"
-          android:title="People"/>
-    <item android:id="@+id/nav_Work"
-          android:icon="@drawable/ic_work_black_24dp"
-          android:title="Work"/>
+    <item android:id="@+id/nav_events"
+          android:icon="@drawable/ic_event_note_black_24dp"
+          android:title="Events"/>
+    <item android:id="@+id/nav_chat"
+          android:icon="@drawable/ic_chat_black_24dp"
+          android:title="Chat"/>
     <item
-          android:id="@+id/nav_Profile"
+          android:id="@+id/nav_profile"
           android:icon="@drawable/ic_person_black_24dp"
           android:title="Person"/>
 

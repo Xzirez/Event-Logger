@@ -9,7 +9,7 @@ import android.support.v4.app.Fragment
 import android.view.MenuItem
 
 
-class home_fragment : AppCompatActivity() {
+class events_fragment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

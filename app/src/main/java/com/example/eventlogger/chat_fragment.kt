@@ -3,9 +3,9 @@ package com.example.eventlogger
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 
-class work_fragment : AppCompatActivity() {
+class chat_fragment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_work)
+        setContentView(R.layout.fragment_chat)
     }
 }
