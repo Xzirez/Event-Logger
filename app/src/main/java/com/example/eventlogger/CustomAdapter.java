@@ -8,10 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CostumAdapter extends ArrayAdapter<String> {
+public class CustomAdapter extends ArrayAdapter<String> {
 
-    CostumAdapter(Context context){
-        super(context, R.layout.testview);
+    CustomAdapter(Context context, String[] events){
+        super(context, R.layout.testview, events);
 
     }
 
@@ -21,10 +21,11 @@ public class CostumAdapter extends ArrayAdapter<String> {
         LayoutInflater buckysInflater = LayoutInflater.from(getContext());
         View customView = buckysInflater.inflate(R.layout.testview, parent, false);
 
-        String singleFoodItem = getItem(position);
-        TextView buckyText = (TextView) customView.findViewById(R.id.txt);
+        String singleEventItem = getItem(position);
+        TextView buckysText = (TextView) customView.findViewById(R.id.txt);
         ImageView buckysImage = (ImageView) customView.findViewById(R.id.plane);
 
+        buckysText.setText(singleEventItem);
         buckysImage.setImageResource(R.drawable.airplane);
         return customView;
 
