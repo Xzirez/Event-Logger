@@ -1,43 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#C6269286"
->
-
-    <ImageView
-            android:layout_width="105"
-            android:layout_height="75" app:srcCompat="@drawable/controller"
-            android:layout_alignParentStart="true" android:layout_marginStart="-1dp"
-            android:layout_alignParentTop="true" android:id="@+id/imageView2" android:layout_marginTop="65dp"
-            android:background="#A86E42C0"
-    />
-    <ImageView
-            android:layout_width="105"
-            android:layout_height="75" app:srcCompat="@drawable/dumbbell"
-            android:layout_alignParentStart="true" android:layout_marginStart="106dp"
-            android:layout_alignParentTop="true" android:id="@+id/imageView3" android:layout_marginTop="65dp"
-            android:background="#CB76D341"/>
-    <ImageView
-            android:layout_width="105"
-            android:layout_height="75" app:srcCompat="@drawable/airplane" android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true" android:layout_marginEnd="95dp" android:id="@+id/imageView4"
-            android:layout_marginTop="65dp" android:background="#98BEEF"/>
-    <ImageView
-            android:layout_width="95"
-            android:layout_height="75" app:srcCompat="@drawable/misc" android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true" android:layout_marginEnd="-1dp" android:id="@+id/imageView5"
-            android:layout_marginTop="65dp" android:background="#918F8F"/>
-
-    <LinearLayout android:layout_width="match_parent" android:layout_height="124dp"
-                  android:layout_marginTop="2dp"
-                  android:layout_below="@+id/imageView3"
-                  android:layout_alignParentBottom="true" android:layout_marginBottom="465dp">
-        <ListView android:layout_width="match_parent" android:layout_height="match_parent"
-                  android:id="@+id/myView"
-        ></ListView>
-
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#C6269286"
+              android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="50pt">
+        <ImageView
+                android:layout_width="95dp"
+                android:layout_height="match_parent" app:srcCompat="@drawable/controller"
+                android:layout_alignParentStart="true" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentTop="true" android:id="@+id/imageView2"
+                android:background="#A86E42C0"
+        />
+        <ImageView
+                android:layout_width="95dp"
+                android:layout_height="match_parent" app:srcCompat="@drawable/dumbbell"
+                android:layout_alignParentStart="true" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentTop="true" android:id="@+id/imageView3"
+                android:background="#CB76D341"/>
+        <ImageView
+                android:layout_width="95dp"
+                android:layout_height="match_parent" app:srcCompat="@drawable/airplane"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true" android:id="@+id/imageView4" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#98BEEF"/>
+        <ImageView
+                android:layout_width="95dp"
+                android:layout_height="match_parent" app:srcCompat="@drawable/misc" android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true" android:id="@+id/imageView5" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#98BEEF"/>
     </LinearLayout>
-</RelativeLayout>
+    <ListView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:id="@+id/Items"></ListView>
+</LinearLayout>
