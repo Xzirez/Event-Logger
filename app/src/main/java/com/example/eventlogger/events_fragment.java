@@ -2,31 +2,36 @@ package com.example.eventlogger;
 
 import android.app.Activity;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
-public class events_fragment extends Activity {
+public class events_fragment extends AppCompatActivity {
+
+    private SectionsStatePagerAdapter mSectionsStatePagerAdapter;
+
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_events);}
+        setContentView(R.layout.fragment_events);
 
-       /* String[] events = {"Airplane","sosos"};
+        /*mSectionsStatePagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
+        mViewPager = findViewById(R.id.container);
 
-        ArrayAdapter myAdapter = new ArrayAdapter();
-        ListView mListView = (ListView) findViewById(R.id.myView);
-        mListView.setAdapter(CustomAdapter)
+        setupViewPager(mViewPager);*/
+    }
+    private void setupViewPager(ViewPager viewPager){
+        SectionsStatePagerAdapter adapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new events_airplane());
+        //adapter.addFragment(new Fragment2(), "Fragment2");
+        //adapter.addFragment(new Fragment3(), "Fragment3");
+        viewPager.setAdapter(adapter);
+    }
+  /*  public void setViewPager(int fragmentNumber){
+        mViewPager.setCurrentItem(fragmentNumber);
+    }*/
 
-        mListView.setOnItemClickListener{
-            new AdapterView.OnItemClickListener(){
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-                    String event = String.valueOf(parent.getItemAtPosition(position));
-                }
-
-            }
-
-        }*/
 
 
     }

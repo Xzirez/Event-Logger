@@ -12,7 +12,7 @@
                 android:layout_height="match_parent" app:srcCompat="@drawable/controller"
                 android:layout_alignParentStart="true" android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_alignParentTop="true" android:id="@+id/imageView2"
+                android:layout_alignParentTop="true" android:id="@+id/btn1"
                 android:background="#A86E42C0"
         />
         <ImageView
@@ -20,22 +20,28 @@
                 android:layout_height="match_parent" app:srcCompat="@drawable/dumbbell"
                 android:layout_alignParentStart="true" android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_alignParentTop="true" android:id="@+id/imageView3"
+                android:layout_alignParentTop="true" android:id="@+id/btn2"
                 android:background="#CB76D341"/>
         <ImageView
                 android:layout_width="95dp"
                 android:layout_height="match_parent" app:srcCompat="@drawable/airplane"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true" android:id="@+id/imageView4" android:layout_marginLeft="5dp"
+                android:layout_alignParentTop="true" android:id="@+id/btn3" android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:background="#98BEEF"/>
         <ImageView
                 android:layout_width="95dp"
                 android:layout_height="match_parent" app:srcCompat="@drawable/misc" android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true" android:id="@+id/imageView5" android:layout_marginLeft="5dp"
+                android:layout_alignParentTop="true" android:id="@+id/btn4" android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:background="#98BEEF"/>
     </LinearLayout>
-    <ListView android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:id="@+id/Items"></ListView>
+    <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/container"
+    >
+
+
+    </android.support.v4.view.ViewPager>
 </LinearLayout>

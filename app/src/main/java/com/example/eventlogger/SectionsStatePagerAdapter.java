@@ -8,16 +8,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class SectionsPageAdapter extends FragmentPagerAdapter {
+public class SectionsStatePagerAdapter extends FragmentPagerAdapter {
 
     private final List<Fragment> mFragmentList = new ArrayList<>();
+    private final List<String> mFragmentTitleList = new ArrayList<>();
 
 
     public void addFragment(Fragment fragment) {
         mFragmentList.add(fragment);
     }
 
-    public SectionsPageAdapter(FragmentManager fm) {
+    public SectionsStatePagerAdapter(FragmentManager fm) {
         super(fm);
     }
 

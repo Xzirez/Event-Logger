@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentManager;
 import androidx.navigation.Navigation;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Snackbar.make(findViewById(R.id.main),"Welcome "+FirebaseAuth.getInstance().getCurrentUser().getEmail(),Snackbar.LENGTH_SHORT).show();
             //Load content
-             displayChatMessage();
+
         }
         //displayChatMessage();
 
@@ -76,25 +75,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.menu_sign_out)
-        {
-            AuthUI.getInstance().signOut(this).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    finish();
-                }
-            });
-        }
-        return true;
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.main_menu,menu);
-        return true;
-    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode,resultCode,data);
@@ -102,35 +84,12 @@ public class MainActivity extends AppCompatActivity {
             System.out.println(requestCode);
             if(resultCode == RESULT_OK){
                 Snackbar.make(findViewById(R.id.main),"Succesfully signed in.Welcome!",Snackbar.LENGTH_SHORT).show();
-                displayChatMessage();
             }else{
                 Snackbar.make(findViewById(R.id.main),"Sign in unsuccessful. Please try again later",Snackbar.LENGTH_SHORT).show();
                 finish();
 
             }
         }
-    }
-    private void displayChatMessage() {
-
-        ListView listOfMessage = findViewById(R.id.list_of_message);
-        adapter = new FirebaseListAdapter<ChatMessage>(this,ChatMessage.class,R.layout.list_item, FirebaseDatabase.getInstance().getReference())
-        {
-            @Override
-            protected void populateView(View v, ChatMessage model, int position) {
-
-                //Get references to the views of list_item.xml
-                TextView messageText, messageUser, messageTime;
-                messageText =  v.findViewById(R.id.message_text);
-                messageUser =  v.findViewById(R.id.message_user);
-                messageTime =  v.findViewById(R.id.message_time);
-
-                messageText.setText(model.getMessageText());
-                messageUser.setText(model.getMessageUser());
-                messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)", model.getMessageTime()));
-
-            }
-        };
-        listOfMessage.setAdapter(adapter);
     }
 
 
